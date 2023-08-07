@@ -20,17 +20,30 @@
 </head>
 
 <body>
+  <!-- Sidebar (Column) -->
+  <div class="sidebar" id="mySidebar">
+    <div id="columnContent" class="column-content"></div>
+  </div>
+
   <!-- Music player container -->
   <div class="player">
     <!-- Wrapper for player content -->
     <div class="wrapper">
       <!-- Container for track details -->
       <div class="details">
-        <!-- Display "Now Playing" status -->
-        <div class="now-playing">PLAYING x OF y</div>
+        <div class="together">
+          <!-- Display "Now Playing" status -->
+          <div class="now-playing">PLAYING x OF y</div>
+          <!-- Container for the dropdown button -->
+          <div class="column-container">
+            <button onclick="toggleColumn()" class="column-btn">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
         <!-- Container for track artwork -->
         <div class="track-art">
-          <img height="250" width="250" style="border-radius: 50%" src="./thumbnail/john smith.png" />
+          <img height="200" width="200" style="border-radius: 50%" src="./thumbnail/john smith.png" />
         </div>
         <!-- Display track name -->
         <div class="track-name">Track Name</div>
@@ -79,6 +92,41 @@
         <!-- Repeat track button -->
         <div class="repeat-track" onclick="repeatTrack()">
           <i class="fas fa-repeat fa-2x" title="repeat"></i>
+        </div>
+      </div>
+
+      <div class="middle">
+        <!-- Wave Bar -->
+        <div id="wave" class="wave-bar">
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+        </div>
+
+        <!-- Help -->
+
+        <div class="popup-container">
+          <button onclick="toggleHelp()" class="popup-btn">
+            <i class="fa-solid fa-question"></i>
+          </button>
+          <div class="popup-content">
+            <p style="color: #f1f1f1; align-self: center">
+              Music Player Instructions
+            </p>
+            <ul style="color: #f1f1f1">
+              <li>Press Space to play pause</li>
+              <li>Press k for next song</li>
+              <li>Press j for previous song</li>
+              <li>Press l to repeat song</li>
+              <li>Press s to shuffle song</li>
+              <li>Press c for all songs</li>
+              <li>Press ? for help</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

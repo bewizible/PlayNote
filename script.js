@@ -25,191 +25,183 @@ const music_list = [
   // List of track objects with 'name' and 'music' properties
   // ...
   {
-    name: "bloody mary (dum dum, da-di-da) - lady gaga [edit audio]",
+    name: "bloody mary (dum dum, da-di-da)",
     music:
       "./music/bloody mary (dum dum, da-di-da) - lady gaga [edit audio].mp3",
   },
   {
-    name: "brazilian phonk mano - slowboy [edit audio]",
+    name: "brazilian phonk mano",
     music: "./music/brazilian phonk mano - slowboy [edit audio].mp3",
   },
   {
-    name: "cant hold us (southend revolution remix) [edit audio]",
+    name: "cant hold us",
     music:
       "music/cant hold us (southend revolution remix) - macklemore ryan lewis ft. ray dalton [edit audio].mp3",
   },
   {
-    name: "collide - justine skye ft. tyga [edit audio]",
+    name: "collide",
     music: "music/collide - justine skye ft. tyga [edit audio].mp3",
   },
   {
-    name: "demons in my soul - scxr soul x sx1nxwy [edit audio]",
+    name: "demons in my soul",
     music: "music/demons in my soul - scxr soul x sx1nxwy [edit audio].mp3",
   },
   {
-    name: "dernière danse x the real slim shady - indila eminem [edit audio]",
+    name: "dernière danse x the real slim shady",
     music:
       "music/dernière danse x the real slim shady - indila eminem [edit audio].mp3",
   },
   {
-    name: "devil eyes - zodvik [edit audio]",
+    name: "devil eyes",
     music: "music/devil eyes - zodvik [edit audio].mp3",
   },
   {
-    name: "Drake - One Dance (audio edit)",
+    name: "One Dance",
     music: "music/Drake - One Dance (audio edit).mp3",
   },
   {
-    name: "enemy - imagine dragons jid [edit audio]",
-    music:
-      "music/enemy - imagine dragons jid [edit audio].mp3",
+    name: "enemy",
+    music: "music/enemy - imagine dragons jid [edit audio].mp3",
   },
   {
-    name: "enemy x genius - imagine dragons lsd [edit audio]",
-    music:
-      "music/enemy x genius - imagine dragons lsd [edit audio].mp3",
+    name: "enemy x genius",
+    music: "music/enemy x genius - imagine dragons lsd [edit audio].mp3",
   },
   {
-    name: "fairytale - alexander rybak [edit audio]",
+    name: "fairytale",
     music: "music/fairytale - alexander rybak [edit audio].mp3",
   },
   {
-    name: "heat waves - glass animals x highcloud cover [edit audio]",
+    name: "heat waves",
     music:
       "music/heat waves - glass animals x highcloud cover [edit audio].mp3",
   },
   {
-    name: "industry baby x e.t. - lil nas x katy perry [edit audio]",
-    music:
-      "music/industry baby x e.t. - lil nas x katy perry [edit audio].mp3",
+    name: "industry baby x e.t.",
+    music: "music/industry baby x e.t. - lil nas x katy perry [edit audio].mp3",
   },
   {
-    name: "jalebi baby x gta s.a - tesher [edit audio]",
-    music:
-      "music/jalebi baby x gta s.a - tesher [edit audio].mp3",
+    name: "jalebi baby x gta s.a",
+    music: "music/jalebi baby x gta s.a - tesher [edit audio].mp3",
   },
   {
-    name: "kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio]",
+    name: "kiss me more x bananza",
     music:
       "music/kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio].mp3",
   },
   {
-    name: "LIFE IN RIO (BRAZILIAN PHONK) - SLOWBOY [EDIT AUDIO]",
+    name: "LIFE IN RIO",
     music: "music/LIFE IN RIO (BRAZILIAN PHONK) - SLOWBOY [EDIT AUDIO].mp3",
   },
   {
-    name: "living life in the night - cheriimoya, sierra kidd [edit audio]",
+    name: "living life in the night",
     music:
       "music/living life in the night - cheriimoya, sierra kidd [edit audio].mp3",
   },
   {
-    name: "metamorphosis - interworld [edit audio]",
+    name: "metamorphosis",
     music: "music/metamorphosis - interworld [edit audio].mp3",
   },
   {
-    name: "money trees - kendrick lamar ft. jay rock [edit audio]",
+    name: "money trees",
     music: "music/money trees - kendrick lamar ft. jay rock [edit audio].mp3",
   },
   {
-    name: "montero (call me by your name) - lil nas x [edit audio]",
+    name: "montero",
     music: "music/montero (call me by your name) - lil nas x [edit audio].mp3",
   },
   {
-    name: "murder in my mind - kordhell [edit audio]",
+    name: "murder in my mind",
     music: "music/murder in my mind - kordhell [edit audio].mp3",
   },
   {
-    name: "my ordinary life - the living tombstoneedit audio ",
-    music:
-      "music/my ordinary life - the living tombstoneedit audio .mp3",
+    name: "my ordinary life",
+    music: "music/my ordinary life - the living tombstoneedit audio.mp3",
   },
   {
-    name: "no lie - sean paul ft. dua lipa [edit audio]",
-    music:
-      "music/no lie - sean paul ft. dua lipa [edit audio].mp3",
+    name: "no lie",
+    music: "music/no lie - sean paul ft. dua lipa [edit audio].mp3",
   },
   {
-    name: "often (kygo remix) - the weeknd [edit audio]",
+    name: "often (kygo remix)",
     music: "music/often (kygo remix) - the weeknd [edit audio].mp3",
   },
   {
-    name: "one kiss x i was never there - dua lipa the weeknd [edit audio]",
+    name: "one kiss x i was never there",
     music:
       "music/one kiss x i was never there - dua lipa the weeknd [edit audio].mp3",
   },
   {
-    name: "one kiss x stereo love - edward maya dua lipa [edit audio]",
+    name: "one kiss x stereo love",
     music:
       "music/one kiss x stereo love - edward maya dua lipa [edit audio].mp3",
   },
   {
-    name: "on my own - darci [edit audio]",
+    name: "on my own",
     music: "music/on my own - darci [edit audio].mp3",
   },
   {
-    name: "rockstar (crankdat remix) - post malone ft. 21 savage [edit audio]",
+    name: "rockstar (crankdat remix)",
     music:
       "music/rockstar (crankdat remix) - post malone ft. 21 savage [edit audio].mp3",
   },
   {
-    name: "scopin - kordhell [edit audio]",
+    name: "scopin",
     music: "music/scopin - kordhell [edit audio].mp3",
   },
   {
-    name: "slow motion (sped up) - amaria bb [edit audio]",
+    name: "slow motion (sped up)",
     music: "music/slow motion (sped up) - amaria bb [edit audio].mp3",
   },
   {
-    name: "stereo love - edward maya vika jigulina [edit audio]",
-    music:
-      "music/stereo love - edward maya vika jigulina [edit audio].mp3",
+    name: "stereo love",
+    music: "music/stereo love - edward maya vika jigulina [edit audio].mp3",
   },
   {
-    name: "such a whre - jvla [edit audio]",
+    name: "such a whre",
     music: "music/such a whre - jvla [edit audio].mp3",
   },
   {
-    name: "the lost soul down x lost soul [edit audio]",
+    name: "the lost soul down x lost soul",
     music: "music/the lost soul down x lost soul [edit audio].mp3",
   },
   {
-    name: "the real slim shady - eminem [edit audio]",
-    music:
-      "music/the real slim shady - eminem [edit audio].mp3",
+    name: "the real slim shady",
+    music: "music/the real slim shady - eminem [edit audio].mp3",
   },
   {
-    name: "under the influence - chris brown [edit audio]",
+    name: "under the influence",
     music: "music/under the influence - chris brown [edit audio].mp3",
   },
   {
-    name: "under the influence x i was never there - chris brown the weeknd [edit audio]",
+    name: "under the influence x i was never there",
     music:
       "music/under the influence x i was never there - chris brown the weeknd [edit audio].mp3",
   },
   {
-    name: "under the influence x renegade - chris brown aaryan shah [edit audio]",
+    name: "under the influence x renegade",
     music:
       "music/under the influence x renegade - chris brown aaryan shah [edit audio].mp3",
   },
   {
-    name: "vur yüreğim x gangsta s paradise - coolio [edit audio]",
+    name: "vur yüreğim x gangsta s paradise",
     music: "music/vur yüreğim x gangsta s paradise - coolio [edit audio].mp3",
   },
   {
-    name: "way down we go (instrumental) - kaleo [edit audio]",
+    name: "way down we go (instrumental)",
     music: "music/way down we go (instrumental) - kaleo [edit audio].mp3",
   },
   {
-    name: "whoopty - cj [edit audio]",
+    name: "whoopty - cj",
     music: "music/whoopty - cj [edit audio].mp3",
   },
   {
-    name: "worth it (instrumental) - fifth harmony ft. kid ink [edit audio]",
+    name: "worth it (instrumental)",
     music:
       "music/worth it (instrumental) - fifth harmony ft. kid ink [edit audio].mp3",
   },
   {
-    name: "ты и я (tiktok remix) - xcho [edit audio]",
+    name: "ты и я (tiktok remix)",
     music: "music/ты и я (tiktok remix) - xcho [edit audio].mp3",
   },
 ];
@@ -252,9 +244,39 @@ document.addEventListener("keydown", function (event) {
   } else if (event.key === "l") {
     event.preventDefault();
     repeatTrack();
+  } else if (event.key === "?") {
+    event.preventDefault();
+    toggleHelp();
+  } else if (event.key === "c") {
+    event.preventDefault();
+    toggleColumn();
   }
 });
+function clickPlay(index) {
+  track_index = index;
+  loadTrack(index);
+  playTrack();
+}
 
+function toggleColumn() {
+  var sidebar = document.getElementById("mySidebar");
+  var columnContent = document.getElementById("columnContent");
+
+  if (sidebar.style.width === "250px") {
+    sidebar.style.width = "0";
+  } else {
+    sidebar.style.width = "250px";
+    generateColumnContent(columnContent); // Generate content when sidebar is opened
+  }
+}
+
+function generateColumnContent(columnContent) {
+  var content = "";
+  music_list.forEach((track, index) => {
+    content += `<a href="#" onclick="clickPlay(${index})">${track.name}</a>`;
+  });
+  columnContent.innerHTML = content;
+}
 function reset() {
   curr_time.textContent = "00:00";
   total_duration.textContent = "00:00";
@@ -290,6 +312,7 @@ function playTrack() {
   isPlaying = true;
   clearInterval(rotationInterval);
   rotationInterval = setInterval(rotateTrackArt, rotationFPS);
+  wave.classList.add("loader");
   playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
 }
 
@@ -297,6 +320,7 @@ function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
   clearInterval(rotationInterval); // Stop the rotation animation
+  wave.classList.remove("loader");
   playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
 
@@ -365,3 +389,26 @@ function setUpdate() {
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
+
+// Function to toggle the help popup
+function toggleHelp() {
+  const popupContainer = document.querySelector(".popup-container");
+
+  // Toggle the visibility of the popup by adding or removing the 'active' class
+  popupContainer.classList.toggle("active");
+}
+
+// Function to close the help popup when clicking outside the popup
+document.addEventListener("click", function (event) {
+  const popupContainer = document.querySelector(".popup-container");
+  const popupBtn = document.querySelector(".popup-btn");
+
+  // Check if the click is outside the popup and its button
+  if (
+    !popupContainer.contains(event.target) &&
+    !popupBtn.contains(event.target)
+  ) {
+    // Close the popup by removing the 'active' class
+    popupContainer.classList.remove("active");
+  }
+});
