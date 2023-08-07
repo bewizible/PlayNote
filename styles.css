@@ -1,11 +1,14 @@
+/* Importing fonts from an online web font service */
 @import url(https://db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon%2FMilk);
 @import url(https://db.onlinewebfonts.com/c/c9df036989db75570c204c593fd6a5f1?family=Lemon%2FMilk+italic);
 @import url(https://db.onlinewebfonts.com/c/842d23fdc945aad56dad0f0acfc83053?family=Lemon%2FMilk+light+italic);
 
+/* Setting default font family for the whole page */
 body {
   font-family: "Lemon/Milk", sans-serif;
 }
 
+/* Styles for the music player container */
 .player {
   height: 95vh;
   display: flex;
@@ -14,6 +17,7 @@ body {
   justify-content: center;
 }
 
+/* Styles for the wrapper container that holds the player's content */
 .wrapper {
   height: 1850px;
   width: 500px;
@@ -23,6 +27,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.3) 0px 15px 12px;
 }
 
+/* Styles for the details container displaying track information */
 .details {
   display: flex;
   align-items: center;
@@ -30,6 +35,7 @@ body {
   justify-content: center;
 }
 
+/* Styles for the track artwork */
 .track-art {
   margin: 25px;
   height: 250px;
@@ -46,33 +52,39 @@ body {
   border-radius: 190px;
 }
 
+/* Styles for the "Now Playing" text */
 .now-playing {
   font-size: 1rem;
 }
 
+/* Styles for the track name */
 .track-name {
   font-size: 2.5rem;
   font-family: "Lemon/Milk italic";
 }
 
+/* Styles for the track artist name */
 .track-artist {
   margin-top: 5px;
   font-size: 1.5rem;
   font-family: "Lemon/Milk light italic";
 }
 
+/* Styles for the control buttons */
 .buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   justify-content: center;
 }
 
+/* Styles for the active button */
 .active {
   color: black;
 }
 
+/* Common styles for the control buttons */
 .repeat-track,
 .random-track,
 .playpause-track,
@@ -83,6 +95,7 @@ body {
   transition: opacity 0.2s;
 }
 
+/* Button hover styles */
 .repeat-track:hover,
 .random-track:hover,
 .playpause-track:hover,
@@ -91,12 +104,14 @@ body {
   opacity: 0.86;
 }
 
+/* Styles for the slider containers */
 .slider_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Styles for the seek slider and volume slider */
 .seek_slider,
 .volume_slider {
   -webkit-appearance: none;
@@ -108,6 +123,7 @@ body {
   -webkit-transition: 0.2s;
 }
 
+/* Styles for the slider thumb */
 .seek_slider::-webkit-slider-thumb,
 .volume_slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -121,11 +137,13 @@ body {
   border-radius: 100%;
 }
 
+/* Slider hover styles */
 .seek_slider:hover,
 .volume-slider:hover {
   opacity: 1;
 }
 
+/* Custom widths for the seek and volume sliders */
 .seek_slider {
   width: 60%;
 }
@@ -134,17 +152,20 @@ body {
   width: 30%;
 }
 
+/* Styles for the current time and total duration display */
 .current-time,
 .total-duration {
   padding: 10px;
   font-family: "Lemon/Milk italic";
 }
 
+/* Styles for the volume control icons */
 i.fa-volume-down,
 i.fa-volume-up {
   padding: 10px;
 }
 
+/* Cursor style for the control icons */
 i,
 i.fa-play-circle,
 i.fa-pause.circle,
@@ -153,14 +174,17 @@ i.fa-step-backward {
   cursor: pointer;
 }
 
+/* Styles for the random icon when the random track feature is active */
 .randomActive {
   color: black;
 }
 
+/* Animation for the loading spinner */
 .rotate {
-  animation: rotation 6s infinite linear;
+  animation: rotation 5s infinite linear;
 }
 
+/* Keyframes for the loading spinner rotation animation */
 @keyframes rotation {
   from {
     transfrom: rotate(0deg);
@@ -170,6 +194,7 @@ i.fa-step-backward {
   }
 }
 
+/* Styles for the loading spinner container */
 .loader {
   height: 70px;
   display: flex;
@@ -177,6 +202,7 @@ i.fa-step-backward {
   align-items: center;
 }
 
+/* Styles for the individual strokes in the loading spinner animation */
 .loader,
 .stroke {
   background: #f1f1f1;
@@ -187,6 +213,7 @@ i.fa-step-backward {
   animation: animate 1.4s linear infinite;
 }
 
+/* Keyframes for the loading spinner animation */
 @keyframes animate {
   50% {
     height: 20%;
@@ -197,6 +224,7 @@ i.fa-step-backward {
   }
 }
 
+/* Delay for the individual strokes in the loading spinner animation */
 .stroke:nth-child(1) {
   animation-delay: 0s;
 }

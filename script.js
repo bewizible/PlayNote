@@ -1,4 +1,4 @@
-// Vars
+// Vars for DOM elements
 let now_playing = document.querySelector(".now-playing");
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");
@@ -14,6 +14,7 @@ let total_duration = document.querySelector(".total-duration");
 let randomIcon = document.querySelector(".fa-random");
 let curr_track = document.createElement("audio");
 
+// Variables for track control and state
 let track_index = 0;
 let isPlaying = false;
 let isRandom = false;
@@ -21,6 +22,8 @@ let updateTimer;
 
 // All my music
 const music_list = [
+  // List of track objects with 'name' and 'music' properties
+  // ...
   {
     name: "bloody mary (dum dum, da-di-da) - lady gaga [edit audio]",
     music:
@@ -31,9 +34,9 @@ const music_list = [
     music: "./music/brazilian phonk mano - slowboy [edit audio].mp3",
   },
   {
-    name: "cant hold us (southend revolution remix) - macklemore ryan lewis ft. ray dalton [edit audio] [TubeRipper.com]",
+    name: "cant hold us (southend revolution remix) [edit audio]",
     music:
-      "music/cant hold us (southend revolution remix) - macklemore ryan lewis ft. ray dalton [edit audio] [TubeRipper.com].mp3",
+      "music/cant hold us (southend revolution remix) - macklemore ryan lewis ft. ray dalton [edit audio].mp3",
   },
   {
     name: "collide - justine skye ft. tyga [edit audio]",
@@ -44,9 +47,9 @@ const music_list = [
     music: "music/demons in my soul - scxr soul x sx1nxwy [edit audio].mp3",
   },
   {
-    name: "dernière danse x the real slim shady - indila eminem [edit audio] [TubeRipper.com]",
+    name: "dernière danse x the real slim shady - indila eminem [edit audio]",
     music:
-      "music/dernière danse x the real slim shady - indila eminem [edit audio] [TubeRipper.com].mp3",
+      "music/dernière danse x the real slim shady - indila eminem [edit audio].mp3",
   },
   {
     name: "devil eyes - zodvik [edit audio]",
@@ -57,14 +60,14 @@ const music_list = [
     music: "music/Drake - One Dance (audio edit).mp3",
   },
   {
-    name: "enemy - imagine dragons jid [edit audio] [TubeRipper.com]",
+    name: "enemy - imagine dragons jid [edit audio]",
     music:
-      "music/enemy - imagine dragons jid [edit audio] [TubeRipper.com].mp3",
+      "music/enemy - imagine dragons jid [edit audio].mp3",
   },
   {
-    name: "enemy x genius - imagine dragons lsd [edit audio] [TubeRipper.com]",
+    name: "enemy x genius - imagine dragons lsd [edit audio]",
     music:
-      "music/enemy x genius - imagine dragons lsd [edit audio] [TubeRipper.com].mp3",
+      "music/enemy x genius - imagine dragons lsd [edit audio].mp3",
   },
   {
     name: "fairytale - alexander rybak [edit audio]",
@@ -76,19 +79,19 @@ const music_list = [
       "music/heat waves - glass animals x highcloud cover [edit audio].mp3",
   },
   {
-    name: "industry baby x e.t. - lil nas x katy perry [edit audio] [TubeRipper.com]",
+    name: "industry baby x e.t. - lil nas x katy perry [edit audio]",
     music:
-      "music/industry baby x e.t. - lil nas x katy perry [edit audio] [TubeRipper.com].mp3",
+      "music/industry baby x e.t. - lil nas x katy perry [edit audio].mp3",
   },
   {
-    name: "jalebi baby x gta s.a - tesher [edit audio] [TubeRipper.com]",
+    name: "jalebi baby x gta s.a - tesher [edit audio]",
     music:
-      "music/jalebi baby x gta s.a - tesher [edit audio] [TubeRipper.com].mp3",
+      "music/jalebi baby x gta s.a - tesher [edit audio].mp3",
   },
   {
-    name: "kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio] [TubeRipper.com]",
+    name: "kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio]",
     music:
-      "music/kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio] [TubeRipper.com].mp3",
+      "music/kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio].mp3",
   },
   {
     name: "LIFE IN RIO (BRAZILIAN PHONK) - SLOWBOY [EDIT AUDIO]",
@@ -100,8 +103,8 @@ const music_list = [
       "music/living life in the night - cheriimoya, sierra kidd [edit audio].mp3",
   },
   {
-    name: "metamorphosis - interworld [edit audio] [TubeRipper.com]",
-    music: "music/metamorphosis - interworld [edit audio] [TubeRipper.com].mp3",
+    name: "metamorphosis - interworld [edit audio]",
+    music: "music/metamorphosis - interworld [edit audio].mp3",
   },
   {
     name: "money trees - kendrick lamar ft. jay rock [edit audio]",
@@ -116,28 +119,28 @@ const music_list = [
     music: "music/murder in my mind - kordhell [edit audio].mp3",
   },
   {
-    name: "my ordinary life - the living tombstoneedit audio [TubeRipper.com]",
+    name: "my ordinary life - the living tombstoneedit audio ",
     music:
-      "music/my ordinary life - the living tombstoneedit audio [TubeRipper.com].mp3",
+      "music/my ordinary life - the living tombstoneedit audio .mp3",
   },
   {
-    name: "no lie - sean paul ft. dua lipa [edit audio] [TubeRipper.com]",
+    name: "no lie - sean paul ft. dua lipa [edit audio]",
     music:
-      "music/no lie - sean paul ft. dua lipa [edit audio] [TubeRipper.com].mp3",
+      "music/no lie - sean paul ft. dua lipa [edit audio].mp3",
   },
   {
     name: "often (kygo remix) - the weeknd [edit audio]",
     music: "music/often (kygo remix) - the weeknd [edit audio].mp3",
   },
   {
-    name: "one kiss x i was never there - dua lipa the weeknd [edit audio] [TubeRipper.com]",
+    name: "one kiss x i was never there - dua lipa the weeknd [edit audio]",
     music:
-      "music/one kiss x i was never there - dua lipa the weeknd [edit audio] [TubeRipper.com].mp3",
+      "music/one kiss x i was never there - dua lipa the weeknd [edit audio].mp3",
   },
   {
-    name: "one kiss x stereo love - edward maya dua lipa [edit audio] [TubeRipper.com]",
+    name: "one kiss x stereo love - edward maya dua lipa [edit audio]",
     music:
-      "music/one kiss x stereo love - edward maya dua lipa [edit audio] [TubeRipper.com].mp3",
+      "music/one kiss x stereo love - edward maya dua lipa [edit audio].mp3",
   },
   {
     name: "on my own - darci [edit audio]",
@@ -157,36 +160,36 @@ const music_list = [
     music: "music/slow motion (sped up) - amaria bb [edit audio].mp3",
   },
   {
-    name: "stereo love - edward maya vika jigulina [edit audio] [TubeRipper.com]",
+    name: "stereo love - edward maya vika jigulina [edit audio]",
     music:
-      "music/stereo love - edward maya vika jigulina [edit audio] [TubeRipper.com].mp3",
+      "music/stereo love - edward maya vika jigulina [edit audio].mp3",
   },
   {
-    name: "such a whre - jvla [edit audio] [TubeRipper.com]",
-    music: "music/such a whre - jvla [edit audio] [TubeRipper.com].mp3",
+    name: "such a whre - jvla [edit audio]",
+    music: "music/such a whre - jvla [edit audio].mp3",
   },
   {
     name: "the lost soul down x lost soul [edit audio]",
     music: "music/the lost soul down x lost soul [edit audio].mp3",
   },
   {
-    name: "the real slim shady - eminem [edit audio] [TubeRipper.com]",
+    name: "the real slim shady - eminem [edit audio]",
     music:
-      "music/the real slim shady - eminem [edit audio] [TubeRipper.com].mp3",
+      "music/the real slim shady - eminem [edit audio].mp3",
   },
   {
     name: "under the influence - chris brown [edit audio]",
     music: "music/under the influence - chris brown [edit audio].mp3",
   },
   {
-    name: "under the influence x i was never there - chris brown the weeknd [edit audio] [TubeRipper.com]",
+    name: "under the influence x i was never there - chris brown the weeknd [edit audio]",
     music:
-      "music/under the influence x i was never there - chris brown the weeknd [edit audio] [TubeRipper.com].mp3",
+      "music/under the influence x i was never there - chris brown the weeknd [edit audio].mp3",
   },
   {
-    name: "under the influence x renegade - chris brown aaryan shah [edit audio] [TubeRipper.com]",
+    name: "under the influence x renegade - chris brown aaryan shah [edit audio]",
     music:
-      "music/under the influence x renegade - chris brown aaryan shah [edit audio] [TubeRipper.com].mp3",
+      "music/under the influence x renegade - chris brown aaryan shah [edit audio].mp3",
   },
   {
     name: "vur yüreğim x gangsta s paradise - coolio [edit audio]",
@@ -197,8 +200,8 @@ const music_list = [
     music: "music/way down we go (instrumental) - kaleo [edit audio].mp3",
   },
   {
-    name: "whoopty - cj [edit audio] [TubeRipper.com]",
-    music: "music/whoopty - cj [edit audio] [TubeRipper.com].mp3",
+    name: "whoopty - cj [edit audio]",
+    music: "music/whoopty - cj [edit audio].mp3",
   },
   {
     name: "worth it (instrumental) - fifth harmony ft. kid ink [edit audio]",
@@ -276,6 +279,7 @@ function repeatTrack() {
 
 let rotationInterval;
 let rotationDegree = 0;
+const rotationFPS = 16;
 
 function playpauseTrack() {
   isPlaying ? pauseTrack() : playTrack();
@@ -284,7 +288,8 @@ function playpauseTrack() {
 function playTrack() {
   curr_track.play();
   isPlaying = true;
-  rotationInterval = setInterval(rotateTrackArt, 16); // Rotate the track art every 50 milliseconds
+  clearInterval(rotationInterval);
+  rotationInterval = setInterval(rotateTrackArt, rotationFPS);
   playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
 }
 
