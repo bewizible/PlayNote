@@ -270,6 +270,24 @@ function toggleColumn() {
   }
 }
 
+document.addEventListener("click", function (event) {
+  const columnContainer = document.querySelector(".column-container");
+  const columnBtn = document.querySelector(".column-btn");
+
+  // Check if the click is outside the popup and its button
+  if (
+    !columnContainer.contains(event.target) &&
+    !columnBtn.contains(event.target)
+  ) {
+    // Close the popup by removing the 'active' class
+    columnContainer.classList.remove("active");
+
+    // Also close the sidebar
+    var sidebar = document.getElementById("mySidebar");
+    sidebar.style.width = "0";
+  }
+});
+
 function generateColumnContent(columnContent) {
   var content = "";
   music_list.forEach((track, index) => {
