@@ -24,188 +24,251 @@ let updateTimer;
 const music_list = [
   // List of track objects with 'name' and 'music' properties
   // ...
+  { music: "./music/after dark.mp3", name: "after dark" },
+  { music: "./music/after hours.mp3", name: "after hours" },
+  { music: "./music/ainsi bas la vida.mp3", name: "ainsi bas la vida" },
+  { music: "./music/bad blood.mp3", name: "bad blood" },
+  { music: "./music/bad girls.mp3", name: "bad girls" },
+  { music: "./music/big boy.mp3", name: "big boy" },
   {
-    name: "bloody mary (dum dum, da-di-da)",
     music:
       "./music/bloody mary (dum dum, da-di-da) - lady gaga [edit audio].mp3",
+    name: "bloody mary (dum dum, da-di-da)",
   },
   {
-    name: "brazilian phonk mano",
     music: "./music/brazilian phonk mano - slowboy [edit audio].mp3",
+    name: "brazilian phonk mano",
   },
   {
-    name: "cant hold us",
     music:
       "music/cant hold us (southend revolution remix) - macklemore ryan lewis ft. ray dalton [edit audio].mp3",
+    name: "cant hold us",
   },
   {
-    name: "collide",
+    music: "./music/carol of the bells.mp3",
+    name: "carol of the bells",
+  },
+  {
+    music: "./music/cataclysm (Im stronger Im smarter.. Im better!).mp3",
+    name: "cataclysm (Im stronger Im smarter.. Im better!)",
+  },
+  {
     music: "music/collide - justine skye ft. tyga [edit audio].mp3",
+    name: "collide",
   },
+  { music: "./music/danza kuduro.mp3", name: "danza kuduro" },
   {
-    name: "demons in my soul",
     music: "music/demons in my soul - scxr soul x sx1nxwy [edit audio].mp3",
+    name: "demons in my soul",
   },
   {
-    name: "dernière danse x the real slim shady",
     music:
       "music/dernière danse x the real slim shady - indila eminem [edit audio].mp3",
+    name: "dernière danse x the real slim shady",
   },
   {
-    name: "devil eyes",
     music: "music/devil eyes - zodvik [edit audio].mp3",
+    name: "devil eyes",
   },
+  { music: "./music/drunk-dazed.mp3", name: "drunk-dazed" },
   {
-    name: "One Dance",
-    music: "music/Drake - One Dance (audio edit).mp3",
-  },
-  {
-    name: "enemy",
     music: "music/enemy - imagine dragons jid [edit audio].mp3",
+    name: "enemy",
   },
   {
-    name: "enemy x genius",
     music: "music/enemy x genius - imagine dragons lsd [edit audio].mp3",
+    name: "enemy x genius",
   },
   {
-    name: "fairytale",
     music: "music/fairytale - alexander rybak [edit audio].mp3",
+    name: "fairytale",
+  },
+  { music: "./music/flashbacks.mp3", name: "flashbacks" },
+  {
+    music: "./music/habibi (albanian remix).mp3",
+    name: "habibi (albanian remix)",
   },
   {
-    name: "heat waves",
     music:
       "music/heat waves - glass animals x highcloud cover [edit audio].mp3",
+    name: "heat waves",
   },
   {
-    name: "industry baby x e.t.",
     music: "music/industry baby x e.t. - lil nas x katy perry [edit audio].mp3",
+    name: "industry baby x e.t.",
   },
   {
-    name: "jalebi baby x gta s.a",
     music: "music/jalebi baby x gta s.a - tesher [edit audio].mp3",
+    name: "jalebi baby x gta s.a",
   },
   {
-    name: "kiss me more x bananza",
     music:
       "music/kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio].mp3",
+    name: "kiss me more x bananza",
+  },
+  { music: "./music/la la la.mp3", name: "la la la" },
+  {
+    music: "./music/la la la (brazil 2014).mp3",
+    name: "la la la (brazil 2014)",
   },
   {
-    name: "LIFE IN RIO",
+    music: "./music/la la la (k theory remix).mp3",
+    name: "la la la (k theory remix)",
+  },
+  {
     music: "music/LIFE IN RIO (BRAZILIAN PHONK) - SLOWBOY [EDIT AUDIO].mp3",
+    name: "LIFE IN RIO",
   },
   {
-    name: "living life in the night",
     music:
       "music/living life in the night - cheriimoya, sierra kidd [edit audio].mp3",
+    name: "living life in the night",
   },
   {
-    name: "metamorphosis",
+    music: "./music/love nwantiti (tiktok remix).mp3",
+    name: "love nwantiti (tiktok remix)",
+  },
+  {
+    music: "./music/masquerade x my ordinary life.mp3",
+    name: "masquerade x my ordinary life",
+  },
+  {
     music: "music/metamorphosis - interworld [edit audio].mp3",
+    name: "metamorphosis",
   },
+  { music: "./music/money.mp3", name: "money" },
+  { music: "./music/monëy so big.mp3", name: "monëy so big" },
   {
-    name: "money trees",
     music: "music/money trees - kendrick lamar ft. jay rock [edit audio].mp3",
+    name: "money trees",
   },
   {
-    name: "montero",
+    music: "./music/montagem orquestra sinfônica.mp3",
+    name: "montagem orquestra sinfônica",
+  },
+  {
     music: "music/montero (call me by your name) - lil nas x [edit audio].mp3",
+    name: "montero",
   },
   {
-    name: "murder in my mind",
     music: "music/murder in my mind - kordhell [edit audio].mp3",
+    name: "murder in my mind",
   },
   {
-    name: "my ordinary life",
     music: "music/my ordinary life - the living tombstoneedit audio.mp3",
+    name: "my ordinary life",
   },
   {
-    name: "no lie",
     music: "music/no lie - sean paul ft. dua lipa [edit audio].mp3",
+    name: "no lie",
   },
   {
-    name: "often (kygo remix)",
     music: "music/often (kygo remix) - the weeknd [edit audio].mp3",
+    name: "often (kygo remix)",
   },
   {
-    name: "one kiss x i was never there",
+    music: "music/on my own - darci [edit audio].mp3",
+    name: "on my own",
+  },
+  { music: "./music/on the floor.mp3", name: "on the floor" },
+  {
+    music: "music/Drake - One Dance (audio edit).mp3",
+    name: "One Dance",
+  },
+  {
     music:
       "music/one kiss x i was never there - dua lipa the weeknd [edit audio].mp3",
+    name: "one kiss x i was never there",
   },
   {
-    name: "one kiss x stereo love",
     music:
       "music/one kiss x stereo love - edward maya dua lipa [edit audio].mp3",
+    name: "one kiss x stereo love",
   },
+  { music: "./music/paro (sped up).mp3", name: "paro (sped up)" },
   {
-    name: "on my own",
-    music: "music/on my own - darci [edit audio].mp3",
-  },
-  {
-    name: "rockstar (crankdat remix)",
     music:
       "music/rockstar (crankdat remix) - post malone ft. 21 savage [edit audio].mp3",
+    name: "rockstar (crankdat remix)",
   },
   {
-    name: "scopin",
-    music: "music/scopin - kordhell [edit audio].mp3",
+    music: "./music/royalty x masquerade.mp3",
+    name: "royalty x masquerade",
+  },
+  { music: "music/scopin - kordhell [edit audio].mp3", name: "scopin" },
+  { music: "./music/she knows.mp3", name: "she knows" },
+  {
+    music: "./music/sing for the moment.mp3",
+    name: "sing for the moment",
   },
   {
-    name: "slow motion (sped up)",
     music: "music/slow motion (sped up) - amaria bb [edit audio].mp3",
+    name: "slow motion (sped up)",
   },
   {
-    name: "stereo love",
     music: "music/stereo love - edward maya vika jigulina [edit audio].mp3",
+    name: "stereo love",
   },
   {
-    name: "such a whre",
     music: "music/such a whre - jvla [edit audio].mp3",
+    name: "such a whre",
   },
   {
-    name: "the lost soul down x lost soul",
+    music: "./music/temperature x bananza (belly dancer).mp3",
+    name: "temperature x bananza (belly dancer)",
+  },
+  {
     music: "music/the lost soul down x lost soul [edit audio].mp3",
+    name: "the lost soul down x lost soul",
   },
   {
-    name: "the real slim shady",
     music: "music/the real slim shady - eminem [edit audio].mp3",
+    name: "the real slim shady",
   },
+  { music: "./music/tous les mêmes.mp3", name: "tous les mêmes" },
   {
-    name: "under the influence",
     music: "music/under the influence - chris brown [edit audio].mp3",
+    name: "under the influence",
   },
   {
-    name: "under the influence x i was never there",
     music:
       "music/under the influence x i was never there - chris brown the weeknd [edit audio].mp3",
+    name: "under the influence x i was never there",
   },
   {
-    name: "under the influence x renegade",
     music:
       "music/under the influence x renegade - chris brown aaryan shah [edit audio].mp3",
+    name: "under the influence x renegade",
   },
+  { music: "./music/unforgettable.mp3", name: "unforgettable" },
+  { music: "./music/unholy.mp3", name: "unholy" },
   {
-    name: "vur yüreğim x gangsta s paradise",
     music: "music/vur yüreğim x gangsta s paradise - coolio [edit audio].mp3",
+    name: "vur yüreğim x gangsta s paradise",
   },
   {
-    name: "way down we go (instrumental)",
     music: "music/way down we go (instrumental) - kaleo [edit audio].mp3",
+    name: "way down we go (instrumental)",
   },
   {
-    name: "whoopty - cj",
     music: "music/whoopty - cj [edit audio].mp3",
+    name: "whoopty - cj",
   },
   {
-    name: "worth it (instrumental)",
+    music: "./music/world is spinning x rich boy.mp3",
+    name: "world is spinning x rich boy",
+  },
+  {
     music:
       "music/worth it (instrumental) - fifth harmony ft. kid ink [edit audio].mp3",
+    name: "worth it (instrumental)",
   },
   {
-    name: "ты и я (tiktok remix)",
     music: "music/ты и я (tiktok remix) - xcho [edit audio].mp3",
+    name: "ты и я (tiktok remix)",
   },
+  { music: "./music/yo voy.mp3", name: "yo voy" },
 ];
-
 loadTrack(track_index);
 
 function loadTrack(track_index) {
