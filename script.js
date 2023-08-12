@@ -291,9 +291,7 @@ function loadTrack(track_index) {
 // Kbd Shortcuts
 document.addEventListener("keydown", function (event) {
   if (event.key === " ") {
-    // Prevent the default browser behavior for the 'Spacebar' key
     event.preventDefault();
-
     playpauseTrack();
   } else if (event.key === "j") {
     event.preventDefault();
@@ -315,24 +313,21 @@ document.addEventListener("keydown", function (event) {
     toggleColumn();
   }
 });
-function clickPlay(index) {
-  track_index = index;
-  loadTrack(index);
-  playTrack();
-}
 
 function toggleColumn() {
   var sidebar = document.getElementById("mySidebar");
   var columnContent = document.getElementById("columnContent");
+  let width = "250px";
 
-  if (sidebar.style.width === "250px") {
+  if (sidebar.style.width === width) {
     sidebar.style.width = "0";
   } else {
-    sidebar.style.width = "250px";
+    sidebar.style.width = width;
     generateColumnContent(columnContent); // Generate content when sidebar is opened
   }
 }
 
+// Close the column if user clicks outside of it
 document.addEventListener("click", function (event) {
   const columnContainer = document.querySelector(".column-container");
   const columnBtn = document.querySelector(".column-btn");
@@ -358,14 +353,26 @@ function generateColumnContent(columnContent) {
   });
   columnContent.innerHTML = content;
 }
+
+// Helper function to use in the column
+function clickPlay(index) {
+  track_index = index;
+  loadTrack(index);
+  playTrack();
+}
+
+// Reset Track
 function reset() {
   curr_time.textContent = "00:00";
   total_duration.textContent = "00:00";
   seek_slider.value = 0;
 }
+
+// Set random track
 function randomTrack() {
   isRandom ? pauseRandom() : playRandom();
 }
+
 function playRandom() {
   isRandom = true;
   randomIcon.classList.add("randomActive");
@@ -374,12 +381,15 @@ function pauseRandom() {
   isRandom = false;
   randomIcon.classList.remove("randomActive");
 }
+
+// Repeat the track
 function repeatTrack() {
   let current_index = track_index;
   loadTrack(current_index);
   playTrack();
 }
 
+// Variables for rotation animation
 let rotationInterval;
 let rotationDegree = 0;
 const rotationFPS = 16;
@@ -405,6 +415,7 @@ function pauseTrack() {
   playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
 
+// Function responsible for rotating the picture
 function rotateTrackArt() {
   rotationDegree += 1; // Increase the rotation degree by 1 degree each time the function is called
   track_art.style.transform = `rotate(${rotationDegree}deg)`;
@@ -431,13 +442,17 @@ function prevTrack() {
   loadTrack(track_index);
   playTrack();
 }
+
+// Current seconds into the track
 function seekTo() {
   let seekto = curr_track.duration * (seek_slider.value / 100);
   curr_track.currentTime = seekto;
 }
+
 function setVolume() {
   curr_track.volume = volume_slider.value / 100;
 }
+
 function setUpdate() {
   let seekPosition = 0;
   if (!isNaN(curr_track.duration)) {
