@@ -26,7 +26,9 @@ const music_list = [
   // ...
   { music: "./music/after dark.mp3", name: "after dark" },
   { music: "./music/after hours.mp3", name: "after hours" },
-  { music: "./music/ainsi bas la vida.mp3", name: "ainsi bas la vida" },
+  { music: "./music/moth to a flame x after hours.mp3", name: "Flame Hours" },
+  { music: "./music/harleys in hawaii v1.mp3", name: "Harleys in Hawaii V1" },
+  { music: "./music/harleys in hawaii v2.mp3", name: "Harleys in Hawaii V2" },
   { music: "./music/bad blood.mp3", name: "bad blood" },
   { music: "./music/bad girls.mp3", name: "bad girls" },
   { music: "./music/big boy.mp3", name: "big boy" },
@@ -34,10 +36,6 @@ const music_list = [
     music:
       "./music/bloody mary (dum dum, da-di-da) - lady gaga [edit audio].mp3",
     name: "bloody mary (dum dum, da-di-da)",
-  },
-  {
-    music: "./music/brazilian phonk mano - slowboy [edit audio].mp3",
-    name: "brazilian phonk mano",
   },
   {
     music:
@@ -83,7 +81,6 @@ const music_list = [
     music: "music/fairytale - alexander rybak [edit audio].mp3",
     name: "fairytale",
   },
-  { music: "./music/flashbacks.mp3", name: "flashbacks" },
   {
     music: "./music/habibi (albanian remix).mp3",
     name: "habibi (albanian remix)",
@@ -106,7 +103,6 @@ const music_list = [
       "music/kiss me more x bananza (belly dancer) - doja cat ft. sza akon [edit audio].mp3",
     name: "kiss me more x bananza",
   },
-  { music: "./music/la la la.mp3", name: "la la la" },
   {
     music: "./music/la la la (brazil 2014).mp3",
     name: "la la la (brazil 2014)",
@@ -151,10 +147,6 @@ const music_list = [
     name: "montero",
   },
   {
-    music: "music/murder in my mind - kordhell [edit audio].mp3",
-    name: "murder in my mind",
-  },
-  {
     music: "music/my ordinary life - the living tombstoneedit audio.mp3",
     name: "my ordinary life",
   },
@@ -172,18 +164,9 @@ const music_list = [
   },
   { music: "./music/on the floor.mp3", name: "on the floor" },
   {
-    music: "music/Drake - One Dance (audio edit).mp3",
-    name: "One Dance",
-  },
-  {
     music:
       "music/one kiss x i was never there - dua lipa the weeknd [edit audio].mp3",
     name: "one kiss x i was never there",
-  },
-  {
-    music:
-      "music/one kiss x stereo love - edward maya dua lipa [edit audio].mp3",
-    name: "one kiss x stereo love",
   },
   { music: "./music/paro (sped up).mp3", name: "paro (sped up)" },
   {
@@ -197,10 +180,6 @@ const music_list = [
   },
   { music: "music/scopin - kordhell [edit audio].mp3", name: "scopin" },
   { music: "./music/she knows.mp3", name: "she knows" },
-  {
-    music: "./music/sing for the moment.mp3",
-    name: "sing for the moment",
-  },
   {
     music: "music/slow motion (sped up) - amaria bb [edit audio].mp3",
     name: "slow motion (sped up)",
