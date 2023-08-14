@@ -1,4 +1,5 @@
 /* Importing fonts from an online web font service */
+/* Futura Font */
 @import url(https://db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon%2FMilk);
 @import url(https://db.onlinewebfonts.com/c/c9df036989db75570c204c593fd6a5f1?family=Lemon%2FMilk+italic);
 @import url(https://db.onlinewebfonts.com/c/842d23fdc945aad56dad0f0acfc83053?family=Lemon%2FMilk+light+italic);
@@ -17,6 +18,7 @@ body {
   justify-content: center;
 }
 
+/* Setting two items together on one line in the player */
 .together {
   display: flex;
   justify-content: space-between;
@@ -52,7 +54,7 @@ body {
   justify-content: center;
 }
 
-/* Styles for the track artwork */
+/* Styles for the track artwork, John Smith png */
 .track-art {
   margin: 25px;
   height: 200px;
@@ -83,6 +85,7 @@ body {
   overflow-y: auto; /* Enable vertical scrolling when content exceeds the container height */
 }
 
+/* Styles for the sidebar content */
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -96,6 +99,7 @@ body {
   color: #f1f1f1;
 }
 
+/* Sidebar styling */
 .column-container {
   position: relative;
   display: inline-block;
@@ -360,8 +364,6 @@ i.fa-step-backward {
 .popup-content {
   display: none;
 }
-
-/* ... Existing CSS code ... */
 
 /* Styles for the active help popup content */
 .popup-container.active .popup-content {
