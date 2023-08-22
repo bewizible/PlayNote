@@ -24,7 +24,7 @@ let updateTimer;
 const music_list = [
   // List of track objects with 'name' and 'music' properties
   // ...
-  { music: "./music/after dark.mp3", name: "after dark" },
+  { music: "./music/After Dark.mp3", name: "after dark" },
   { music: "./music/after hours.mp3", name: "after hours" },
   { music: "./music/moth to a flame x after hours.mp3", name: "Flame Hours" },
   { music: "./music/harleys in hawaii v1.mp3", name: "Harleys in Hawaii V1" },
@@ -32,16 +32,16 @@ const music_list = [
   { music: "./music/bad blood.mp3", name: "bad blood" },
   // { music: "./music/bad girls.mp3", name: "bad girls" },
   { music: "./music/big boy.mp3", name: "big boy" },
-  // {
-  //   music:
-  //     "./music/bloody mary (dum dum, da-di-da) - lady gaga [edit audio].mp3",
-  //   name: "bloody mary (dum dum, da-di-da)",
-  // },
-  // {
-  //   music:
-  //     "music/cant hold us (southend revolution remix) - macklemore ryan lewis ft. ray dalton [edit audio].mp3",
-  //   name: "cant hold us",
-  // },
+  {
+    music:
+      "./music/bloody mary (dum dum, da-di-da) - lady gaga [edit audio].mp3",
+    name: "bloody mary (dum dum, da-di-da)",
+  },
+  {
+    music:
+      "music/cant hold us (southend revolution remix) - macklemore ryan lewis ft. ray dalton [edit audio].mp3",
+    name: "cant hold us",
+  },
   // {
   //   music: "./music/carol of the bells.mp3",
   //   name: "carol of the bells",
@@ -128,16 +128,16 @@ const music_list = [
   //   music: "./music/masquerade x my ordinary life.mp3",
   //   name: "masquerade x my ordinary life",
   // },
-  // {
-  //   music: "music/metamorphosis - interworld [edit audio].mp3",
-  //   name: "metamorphosis",
-  // },
+  {
+    music: "music/metamorphosis - interworld [edit audio].mp3",
+    name: "metamorphosis",
+  },
   // { music: "./music/money.mp3", name: "money" },
   { music: "./music/monëy so big.mp3", name: "monëy so big" },
-  // {
-  //   music: "music/money trees - kendrick lamar ft. jay rock [edit audio].mp3",
-  //   name: "money trees",
-  // },
+  {
+    music: "music/money trees - kendrick lamar ft. jay rock [edit audio].mp3",
+    name: "money trees",
+  },
   // {
   //   music: "./music/montagem orquestra sinfônica.mp3",
   //   name: "montagem orquestra sinfônica",
@@ -154,14 +154,14 @@ const music_list = [
   //   music: "music/no lie - sean paul ft. dua lipa [edit audio].mp3",
   //   name: "no lie",
   // },
-  // {
-  //   music: "music/often (kygo remix) - the weeknd [edit audio].mp3",
-  //   name: "often (kygo remix)",
-  // },
-  // {
-  //   music: "music/on my own - darci [edit audio].mp3",
-  //   name: "on my own",
-  // },
+  {
+    music: "music/often (kygo remix) - the weeknd [edit audio].mp3",
+    name: "often (kygo remix)",
+  },
+  {
+    music: "music/on my own - darci [edit audio].mp3",
+    name: "on my own",
+  },
   // { music: "./music/on the floor.mp3", name: "on the floor" },
   // {
   //   music:
@@ -169,11 +169,11 @@ const music_list = [
   //   name: "one kiss x i was never there",
   // },
   // { music: "./music/paro (sped up).mp3", name: "paro (sped up)" },
-  // {
-  //   music:
-  //     "music/rockstar (crankdat remix) - post malone ft. 21 savage [edit audio].mp3",
-  //   name: "rockstar (crankdat remix)",
-  // },
+  {
+    music:
+      "music/rockstar (crankdat remix) - post malone ft. 21 savage [edit audio].mp3",
+    name: "rockstar (crankdat remix)",
+  },
   // {
   //   music: "./music/royalty x masquerade.mp3",
   //   name: "royalty x masquerade",
@@ -200,10 +200,10 @@ const music_list = [
   //   music: "music/the lost soul down x lost soul [edit audio].mp3",
   //   name: "the lost soul down x lost soul",
   // },
-  // {
-  //   music: "music/the real slim shady - eminem [edit audio].mp3",
-  //   name: "the real slim shady",
-  // },
+  {
+    music: "music/the real slim shady - eminem [edit audio].mp3",
+    name: "the real slim shady",
+  },
   // { music: "./music/tous les mêmes.mp3", name: "tous les mêmes" },
   {
     music: "music/under the influence - chris brown [edit audio].mp3",
