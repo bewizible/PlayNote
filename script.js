@@ -34,8 +34,8 @@ const music_list = [
   { music: "./music/big boy.mp3", name: "big boy" },
   {
     music:
-      "./music/bloody mary (dum dum, da-di-da) - lady gaga [edit audio].mp3",
-    name: "bloody mary (dum dum, da-di-da)",
+      "./music/METAMORPHOSIS X SHADOW LADY (PHONK TIKTOK MASHUP) EDIT AUDIO.mp3",
+    name: "METAMORPHOSIS X SHADOW LADY",
   },
   {
     music:
