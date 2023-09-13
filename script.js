@@ -25,7 +25,8 @@ const music_list = [
   // List of track objects with 'name' and 'music' properties
   // ...
   { name: "L's theme A", music: "./music/L's theme A.m4a" },
-  { name: "Light's Theme RUDE", music: "./music/Light's Theme A.m4a" },
+  { name: "L's Theme ULTRA EPIC", music: "./music/L's Theme ULTRA EPIC.mp3" },
+  { name: "Light's Theme RUDE", music: "./music/Light's Theme RUDE.m4a" },
   { name: "Light's Theme", music: "./music/Light's Theme.m4a" },
   { name: "Near's Theme A", music: "./music/Near's Theme A.m4a" },
   { name: "Near's Theme B", music: "./music/Near's Theme B.m4a" },
