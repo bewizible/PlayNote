@@ -31,7 +31,7 @@ const music_list = [
   { name: "Near's Theme A", music: "./music/Near's Theme A.m4a" },
   { name: "Near's Theme B", music: "./music/Near's Theme B.m4a" },
   { name: "Harleys In Hawaii", music: "./music/Harleys In Hawaii.m4a" },
-  { name: "High Beams", music: "./music/High Beams.m4a" },
+  { name: "High Beams", music: "./music/High Beams.mp3" },
   {
     name: "LIVING LIFE IN THE NIGHT",
     music: "./music/LIVING LIFE IN THE NIGHT.m4a",
