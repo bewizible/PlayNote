@@ -1,139 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Document title -->
+    <title>Music Player</title>
 
-<head>
-  <!-- Document title -->
-  <title>Music Player</title>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Meta tags -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- External CSS stylesheets -->
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css"
+    />
 
-  <!-- External CSS stylesheets -->
-  <link href="styles.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" />
+    <!-- External JavaScript file with defer attribute for deferred execution -->
+    <script src="script.js" defer></script>
 
-  <!-- External JavaScript file with defer attribute for deferred execution -->
-  <script src="script.js" defer></script>
+    <!-- Favico -->
+    <link rel="icon" type="image/x-icon" href="./thumbnail/fav.ico" />
+  </head>
 
-  <!-- Favico -->
-  <link rel="icon" type="image/x-icon" href="./thumbnail/fav.ico" />
-</head>
+  <body>
+    <!-- Sidebar (Column) -->
+    <div class="sidebar" id="mySidebar">
+      <div id="columnContent" class="column-content"></div>
+    </div>
 
-<body>
-  <!-- Sidebar (Column) -->
-  <div class="sidebar" id="mySidebar">
-    <div id="columnContent" class="column-content"></div>
-  </div>
+    <!-- Music player container -->
+    <div class="player">
+      <!-- Wrapper for player content -->
+      <div class="wrapper">
+        <!-- Container for track details -->
+        <div class="details">
+          <div class="together">
+            <!-- Display "Now Playing" status -->
+            <div class="now-playing">PLAYING x OF y</div>
+            <!-- Container for the dropdown button -->
+            <div class="column-container">
+              <button onclick="toggleColumn()" class="column-btn">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Container for track artwork -->
+          <div class="track-art">
+            <img
+              height="200"
+              width="200"
+              style="border-radius: 50%"
+              src="./thumbnail/john smith.png"
+            />
+          </div>
+          <!-- Display track name -->
+          <div class="track-name">Track Name</div>
+          <!-- Display track artist -->
+          <div class="track-artist">Quitezy</div>
+        </div>
 
-  <!-- Music player container -->
-  <div class="player">
-    <!-- Wrapper for player content -->
-    <div class="wrapper">
-      <!-- Container for track details -->
-      <div class="details">
-        <div class="together">
-          <!-- Display "Now Playing" status -->
-          <div class="now-playing">PLAYING x OF y</div>
-          <!-- Container for the dropdown button -->
-          <div class="column-container">
-            <button onclick="toggleColumn()" class="column-btn">
-              <i class="fa-solid fa-bars"></i>
-            </button>
+        <!-- Container for seek slider and total duration -->
+        <div class="slider_container">
+          <!-- Display current time -->
+          <div class="current-time">00:00</div>
+          <!-- Seek slider for track progress -->
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+          <!-- Display total duration of the track -->
+          <div class="total-duration">00:00</div>
+        </div>
+
+        <!-- Container for volume slider and volume control icons -->
+        <div class="slider_container">
+          <!-- Volume down icon -->
+          <i class="fa fa-volume-down"></i>
+          <!-- Volume slider for volume control -->
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="99"
+            class="volume_slider"
+            onchange="setVolume()"
+          />
+          <!-- Volume up icon -->
+          <i class="fa fa-volume-up"></i>
+        </div>
+
+        <!-- Container for control buttons -->
+        <div class="buttons">
+          <!-- Random track button -->
+          <div class="random-track" onclick="randomTrack()">
+            <i class="fas fa-random fa-2x" title="random"></i>
+          </div>
+          <!-- Previous track button -->
+          <div
+            data-title-no-tooltip="Previous"
+            class="prev-track"
+            onclick="prevTrack()"
+          >
+            <i class="fa fa-step-backward fa-2x"></i>
+          </div>
+          <!-- Play/pause track button -->
+          <div
+            data-title-no-tooltip="Play"
+            class="playpause-track"
+            onclick="playpauseTrack()"
+          >
+            <i class="fas fa-play-circle fa-5x"></i>
+          </div>
+          <!-- Next track button -->
+          <div
+            data-title-no-tooltip="Next"
+            class="next-track"
+            onclick="nextTrack()"
+          >
+            <i class="fa fa-step-forward fa-2x"></i>
+          </div>
+          <!-- Repeat track button -->
+          <div class="repeat-track" onclick="repeatTrack()">
+            <i class="fas fa-repeat fa-2x" title="repeat"></i>
+          </div>
+          <!-- Loop Track Button -->
+          <div class="loop-track" onclick="loopTrack()">
+            <i class="fa-solid fa-arrow-rotate-right fa-2x" title="loop"></i>
           </div>
         </div>
-        <!-- Container for track artwork -->
-        <div class="track-art">
-          <img height="200" width="200" style="border-radius: 50%" src="./thumbnail/john smith.png" />
-        </div>
-        <!-- Display track name -->
-        <div class="track-name">Track Name</div>
-        <!-- Display track artist -->
-        <div class="track-artist">Quitezy</div>
-      </div>
 
-      <!-- Container for seek slider and total duration -->
-      <div class="slider_container">
-        <!-- Display current time -->
-        <div class="current-time">00:00</div>
-        <!-- Seek slider for track progress -->
-        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" />
-        <!-- Display total duration of the track -->
-        <div class="total-duration">00:00</div>
-      </div>
+        <div class="middle">
+          <!-- Wave Bar -->
+          <div id="wave" class="wave-bar">
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+          </div>
 
-      <!-- Container for volume slider and volume control icons -->
-      <div class="slider_container">
-        <!-- Volume down icon -->
-        <i class="fa fa-volume-down"></i>
-        <!-- Volume slider for volume control -->
-        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()" />
-        <!-- Volume up icon -->
-        <i class="fa fa-volume-up"></i>
-      </div>
+          <!-- Help -->
 
-      <!-- Container for control buttons -->
-      <div class="buttons">
-        <!-- Random track button -->
-        <div class="random-track" onclick="randomTrack()">
-          <i class="fas fa-random fa-2x" title="random"></i>
-        </div>
-        <!-- Previous track button -->
-        <div data-title-no-tooltip="Previous" class="prev-track" onclick="prevTrack()">
-          <i class="fa fa-step-backward fa-2x"></i>
-        </div>
-        <!-- Play/pause track button -->
-        <div data-title-no-tooltip="Play" class="playpause-track" onclick="playpauseTrack()">
-          <i class="fas fa-play-circle fa-5x"></i>
-        </div>
-        <!-- Next track button -->
-        <div data-title-no-tooltip="Next" class="next-track" onclick="nextTrack()">
-          <i class="fa fa-step-forward fa-2x"></i>
-        </div>
-        <!-- Repeat track button -->
-        <div class="repeat-track" onclick="repeatTrack()">
-          <i class="fas fa-repeat fa-2x" title="repeat"></i>
-        </div>
-      </div>
-
-      <div class="middle">
-        <!-- Wave Bar -->
-        <div id="wave" class="wave-bar">
-          <span class="stroke"></span>
-          <span class="stroke"></span>
-          <span class="stroke"></span>
-          <span class="stroke"></span>
-          <span class="stroke"></span>
-          <span class="stroke"></span>
-          <span class="stroke"></span>
-        </div>
-
-        <!-- Help -->
-
-        <div class="popup-container">
-          <button onclick="toggleHelp()" class="popup-btn">
-            <i class="fa-solid fa-question"></i>
-          </button>
-          <div class="popup-content">
-            <p style="color: #f1f1f1; align-self: center">
-              Music Player Instructions
-            </p>
-            <ul style="color: #f1f1f1">
-              <li>Press Space to play pause</li>
-              <li>Press k for next song</li>
-              <li>Press j for previous song</li>
-              <li>Press l to repeat song</li>
-              <li>Press s to shuffle song</li>
-              <li>Press c for all songs</li>
-              <li>Press ? for help</li>
-            </ul>
+          <div class="popup-container">
+            <button onclick="toggleHelp()" class="popup-btn">
+              <i class="fa-solid fa-question"></i>
+            </button>
+            <div class="popup-content">
+              <p style="color: #f1f1f1; align-self: center">
+                Music Player Instructions
+              </p>
+              <ul style="color: #f1f1f1">
+                <li>Press Space to play pause</li>
+                <li>Press k for next song</li>
+                <li>Press j for previous song</li>
+                <li>Press l to repeat song</li>
+                <li>Press s to shuffle song</li>
+                <li>Press c for all songs</li>
+                <li>Press ? for help</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

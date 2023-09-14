@@ -32,6 +32,7 @@ const music_list = [
   { name: "Near's Theme B", music: "./music/Near's Theme B.m4a" },
   { name: "Harleys In Hawaii", music: "./music/Harleys In Hawaii.m4a" },
   { name: "High Beams", music: "./music/High Beams.mp3" },
+  { name: "Teeth", music: "./music/Teeth.m4a" },
   {
     name: "LIVING LIFE IN THE NIGHT",
     music: "./music/LIVING LIFE IN THE NIGHT.m4a",
@@ -74,9 +75,12 @@ document.addEventListener("keydown", function (event) {
   } else if (event.key === "s") {
     event.preventDefault();
     randomTrack();
-  } else if (event.key === "l") {
+  } else if (event.key === "r") {
     event.preventDefault();
     repeatTrack();
+  } else if (event.key == "l") {
+    event.preventDefault();
+    loopTrack();
   } else if (event.key === "?") {
     event.preventDefault();
     toggleHelp();
@@ -159,6 +163,18 @@ function repeatTrack() {
   let current_index = track_index;
   loadTrack(current_index);
   playTrack();
+}
+
+// Put the track on loop
+function loopTrack() {
+  if (curr_track.loop) {
+    curr_track.loop = false;
+    document.querySelector(".loop-track").classList.remove("loop-active");
+  } else {
+    curr_track.loop = true;
+    document.querySelector(".loop-track").classList.add("loop-active");
+    window.getComputedStyle(loopIcon).fontSize;
+  }
 }
 
 // Variables for rotation animation
